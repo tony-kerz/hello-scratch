@@ -1,0 +1,13 @@
+@import 'menu';
+
+// gradient: http://stackoverflow.com/a/2870024/2371903
+//
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 0.5em;
+  background: linear-gradient(315deg, rgba(247,247,252,1) 0, rgba(68,120,155,1) 100%);
+  background-attachment: fixed;
+}
