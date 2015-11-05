@@ -56,6 +56,14 @@ module.exports = {
       {
         test: require.resolve('semantic-ui-visibility/visibility'),
         loader: 'imports?jQuery=jquery'
+      },
+      {
+        test: require.resolve('hellojs/src/modules/google'),
+        loader: 'imports?hello=hellojs/dist/hello'
+      },
+      {
+        test: require.resolve('hellojs/src/modules/facebook'),
+        loader: 'imports?hello=hellojs/dist/hello'
       }
     ]
   }

@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
+import debug from 'debug'
+let dbg = debug('app:home')
 
 class Home extends Component {
+
   render() {
     return(
       <div>
