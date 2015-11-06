@@ -1,21 +1,22 @@
 # hello-scratch
 
-this repository is intended to illustrate a basic example which uses [hello-js](https://adodson.com/hello.js/) to
-authenticate against an oauth provider.
+this repository is intended to illustrate a basic example which uses [hello-js](https://adodson.com/hello.js/)
+to authenticate against an oauth provider.
 
 it is currently setup to authenticate against facebook and google,
 however google isn't currently working, but it illustrates the idea of supporting multiple auth options.
 
 this repo also incidentally illustrates the following elements:
-1. [webpack](http://webpack.github.io/)
-1. [React](https://facebook.github.io/react/)
-1. [react-router](https://github.com/rackt/react-router)
-1. [babel](http://babeljs.io/)
-1. [semantic-ui](http://semantic-ui.com/)
+
+1. [webpack](http://webpack.github.io/) for build
+1. [react](https://facebook.github.io/react/) for view
+1. [react-router](https://github.com/rackt/react-router) for routing
+1. [babel](http://babeljs.io/) for es-next syntax
+1. [semantic-ui](http://semantic-ui.com/) for css styling
 
 future elements to be added may include:
 
-1. [redux](http://redux.js.org/) for model management within react
+1. [redux](http://redux.js.org/) for data flow
 
 ## directions
 
