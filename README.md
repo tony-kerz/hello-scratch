@@ -31,4 +31,6 @@ future elements to be added may include:
 1. look in the javascript console for the comment with `api.then`,
 if you expand the referenced object you should see some basic profile info returned by facebook
 
-notes: this is definitely rough around the edges, but it illustrates the basic idea
+notes:
+* this is definitely rough around the edges, but it illustrates the basic idea
+* this was only tested in chrome `Version 46.0.2490.80 (64-bit)` so far, so YMMV in other browsers
