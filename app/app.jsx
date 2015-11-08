@@ -2,14 +2,27 @@ import 'semantic-ui-css/semantic.css'
 import './app.scss'
 import React from 'react'
 import ReactDom from 'react-dom'
-import $ from 'jquery'
 import TapEventPlugin from 'react-tap-event-plugin'
-import Router from 'react-router'
-import AppRoutes from './app-routes'
+import configureStore from './configure-store'
+import { Provider } from 'react-redux'
+import { ReduxRouter } from 'redux-router'
+
+const store = configureStore()
+
+var setNameActionCreator = function (name) {
+    return {
+        type: 'SET_NAME',
+        name: name
+    }
+}
+
+store.dispatch(setNameActionCreator('bob'))
 
 TapEventPlugin()
 
 ReactDom.render(
-  <Router history={Router.HashLocation}>{AppRoutes}</Router>,
-  $('#content')[0]
+  <Provider store={store}>
+    <ReduxRouter/>
+  </Provider>,
+  document.getElementById('content')
 )

@@ -6,7 +6,7 @@ import Stuff from './stuff'
 import SignIn from './sign-in'
 import Session from './session'
 
-let AppRoutes = (
+let routes = (
   <Route path='/' component={Main}>
     <IndexRoute component={Home}/>
     <Route path='home' component={Home} />
@@ -15,4 +15,4 @@ let AppRoutes = (
   </Route>
 )
 
-export default AppRoutes
+export default routes

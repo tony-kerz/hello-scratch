@@ -7,7 +7,7 @@ config = _.extend(
   {
     //devtool: 'eval', // fastest, least-helpful
     //devtool: 'cheap-module-eval-source-map', // medium-fast, medium-helpful
-    devtool: 'source-map', // slowest, most-helpful
+    //devtool: 'source-map', // slowest, most-helpful
     debug: true,
     plugins: [
       new HtmlWebpackPlugin(
