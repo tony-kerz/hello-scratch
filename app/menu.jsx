@@ -5,17 +5,32 @@ import ReactDom from 'react-dom'
 import $ from 'jquery'
 import 'semantic-ui-visibility/visibility'
 import {Link} from 'react-router'
+import {connect} from 'react-redux'
+import {logout} from './session/actions'
 
+@connect(
+  (state) => {
+    dbg('connect: state=%o', state)
+    return {
+      session: state.session
+    }
+  },
+  {
+    logout
+  }
+)
 class Menu extends Component {
   render() {
+    dbg('render: props=%o', this.props)
+    const {session, logout} = this.props
     return(
       <div className='ui masthead large secondary menu'>
         <div className='ui container xyz'>
           <Link to='/home' className='item' activeClassName='active'>Home</Link>
           <Link to='/stuff' className='item' activeClassName='active'>Stuff</Link>
-          { this.props.session.isLoggedIn() ? (
+          { session && session.isActive ? (
               <div className='right item'>
-                <button onClick={this.logout} className='ui button'>
+                <button onClick={logout()} className='ui button'>
                   Logout
                 </button>
               </div>
@@ -30,10 +45,10 @@ class Menu extends Component {
     )
   }
 
-  logout = () => {
-    dbg('logout: session=%o', this.props.session)
-    this.props.session.logout()
-  }
+  // logout = () => {
+  //   dbg('logout: session=%o', this.props.session)
+  //   this.props.session.logout()
+  // }
 
   componentDidMount() {
     console.log('menu: cdm')
